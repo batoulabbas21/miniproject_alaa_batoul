@@ -1,0 +1,28 @@
+# Ignore Python/Jupyter/IDE junk
+__pycache__/
+*.pyc
+*.log
+*.sqlite3
+*.db
+.env
+.venv/
+.vscode/
+.DS_Store
+
+# OS-generated junk
+Thumbs.db
+ehthumbs.db
+*.bak
+*.swp
+
+# Don't track large system-level folders
+../.anaconda/
+../.android/
+../.cache/
+../.conda/
+../.docker/
+../.dotnet/
+
+# User defined
+my_models
+node_modules
