@@ -1,0 +1,10 @@
+to run the code 
+create an environment having the requirements in the file found INSIDE EVERY FOLDER OF THE PROJECT (BACKEND-FRONTEND-MedicalRuleEnginePDF)
+activate your env 
+run your backend main through :uvicorn backend.main:app --reload
+to test if every thing is okay do through :http://127.0.0.1:8000/analyze/reports/
+open the  cmd activate the environment again and run the front end by :npm start
+the results appear on :http://localhost:3000/
+
+to run the rule based version in a cmd reactivate the env run :uvicorn MedicalRuleEnginePDF.main2:app --reload
+see results on :http://127.0.0.1:8500/
