@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Alert Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f8fc;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        h2 {
+            color: #1f4e79;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        .btn {
+            background-color: #1f78d1;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #155b9e;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            text-align: left;
+            margin: 5px auto;
+            max-width: 600px;
+            background-color: #e7f1fc;
+            padding: 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload Medical Report (.pdf or .txt)</h2>
+    <form action="/" enctype="multipart/form-data" method="post">
+        <input type="file" name="file" accept=".pdf,.txt" required class="btn">
+        <button type="submit" class="btn">Analyze</button>
+    </form>
+
+    {% if filename %}
+        <h3>Alerts for {{ filename }}</h3>
+        <ul>
+            {% for alert in alerts %}
+                <li>{{ alert }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

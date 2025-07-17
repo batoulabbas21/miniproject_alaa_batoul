@@ -1,0 +1,10 @@
+Patient Name: Mark Hassan
+Age: 50
+Diagnosis: Uncontrolled Hypertension
+
+Vitals:
+- Systolic: 190 mmHg
+- Diastolic: 110 mmHg
+
+Notes:
+Patient advised to reduce sodium intake, start ACE inhibitors, and monitor BP daily.

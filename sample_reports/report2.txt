@@ -1,0 +1,11 @@
+Patient Name: Ali Youssef
+Age: 58
+Diagnosis: Suspected Sepsis
+
+Vital Signs:
+- Temperature: 39.5°C
+- Blood Pressure: 100/70 mmHg
+- WBC Count: 18,000 cells/mcL
+
+Action:
+Immediate IV antibiotic treatment initiated. Sepsis protocol activated. Monitor for systemic inflammatory response.
