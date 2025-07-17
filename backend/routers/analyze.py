@@ -89,3 +89,5 @@ def export_single_report(report_id: int):
     export_report_to_pdf(report)
     filename = f"exported_reports/{report.filename.replace('.txt', '').replace('.pdf', '')}_summary.pdf"
     return FileResponse(filename, media_type='application/pdf', filename=filename)
+
+

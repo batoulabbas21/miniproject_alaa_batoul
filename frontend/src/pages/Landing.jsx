@@ -13,14 +13,12 @@ const Landing = () => {
           <FaFileMedical size={60} color="#007BFF" style={{ margin: "0 20px" }} />
           <FaShieldAlt size={60} color="#007BFF" />
         </div>
-        <h1 style={styles.title}>Welcome to</h1>
-        <h2 style={styles.titleHighlight}>Medical Report Analyzer</h2>
-        <p style={styles.subtitle}>
-          Upload your medical report and get AI-powered summaries and risk analysis instantly.
-        </p>
-        <button style={styles.button} onClick={() => navigate("/home")}>
-          <FaRocket style={{ marginRight: "8px" }} />
-          Start Analyzing
+
+        <h1 style={styles.title}>Welcome to our medical analyzer</h1>
+        <p style={styles.subtitle}>Where AI meets reality to give you the best summarizer</p>
+
+        <button style={styles.button} onClick={() => navigate("/navigate")}>
+          <FaRocket style={{ marginRight: "8px" }} /> Start the Analyzer
         </button>
       </div>
     </div>
@@ -42,27 +40,21 @@ const styles = {
     padding: "3rem",
     borderRadius: "20px",
     boxShadow: "0 10px 25px rgba(0, 123, 255, 0.1)",
-    maxWidth: "600px",
+    maxWidth: "700px",
     width: "100%",
   },
   iconRow: {
     display: "flex",
     justifyContent: "center",
-    marginBottom: "1rem",
+    marginBottom: "1.5rem",
   },
   title: {
     fontSize: "1.75rem",
     color: "#333",
     margin: "0.5rem 0",
   },
-  titleHighlight: {
-    fontSize: "2rem",
-    color: "#007BFF",
-    marginBottom: "1rem",
-    fontWeight: "bold",
-  },
   subtitle: {
-    fontSize: "1rem",
+    fontSize: "1.05rem",
     color: "#555",
     marginBottom: "2rem",
   },
@@ -78,6 +70,7 @@ const styles = {
     alignItems: "center",
     margin: "0 auto",
     boxShadow: "0 5px 15px rgba(0, 123, 255, 0.3)",
+    marginBottom: "2rem",
   },
 };
 
