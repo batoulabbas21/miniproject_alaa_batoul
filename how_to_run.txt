@@ -6,5 +6,7 @@ to test if every thing is okay do through :http://127.0.0.1:8000/analyze/reports
 open the  cmd activate the environment again and run the front end by :npm start
 the results appear on :http://localhost:3000/
 
-to run the rule based version in a cmd reactivate the env run :uvicorn MedicalRuleEnginePDF.main2:app --reload
+to run the rule based version in a cmd reactivate the env run :cd MedicalRuleEnginePDF
+uvicorn main2:app --reload --port 8500
+
 see results on :http://127.0.0.1:8500/
