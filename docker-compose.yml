@@ -1,0 +1,39 @@
+
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://postgres:bat1234@db:5432/medical_reports
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./frontend:/app
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: medical_reports
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: bat1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

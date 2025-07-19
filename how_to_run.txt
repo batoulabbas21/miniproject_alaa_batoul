@@ -1,10 +1,22 @@
-to run the code 
+to run the code :(manual)
 create an environment having the requirements in the file found INSIDE EVERY FOLDER OF THE PROJECT (BACKEND-FRONTEND-MedicalRuleEnginePDF)
-activate your env 
+
+activate your env : conda activate "env name"
+
 run your backend main through :uvicorn backend.main:app --reload
 to test if every thing is okay do through :http://127.0.0.1:8000/analyze/reports/
-open the  cmd activate the environment again and run the front end by :npm start
+
+open the  cmd activate the environment again and run the front end by :
+npm start
 the results appear on :http://localhost:3000/
 
-to run the rule based version in a cmd reactivate the env run :uvicorn MedicalRuleEnginePDF.main2:app --reload
+to run the rule based version in a cmd reactivate the env run :
+cd MedicalRuleEnginePDF
+uvicorn main2:app --reload --port 8500
 see results on :http://127.0.0.1:8500/
+
+to access docker: in your cmd run the following :
+docker compose build
+docker compose up -d 
+you will see results on :http://localhost:3100/
+note: if docker used no need for creating the env just perform the docker steps mentioned above 
